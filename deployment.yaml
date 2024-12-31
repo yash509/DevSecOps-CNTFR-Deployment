@@ -1,19 +1,19 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: pe-wa-deployment
+  name: cntfrgme-deployment
 spec:
   replicas: 6  # Number of desired replicas
   selector:
     matchLabels:
-      app: pe-wa
+      app: cntfrgme
   template:
     metadata:
       labels:
-        app: pe-wa
+        app: cntfrgme
     spec:
       containers:
-      - name: pe-wa
-        image: yash5090/pe-wa:latest
+      - name: cntfrgme
+        image: yash5090/cntfrgme:latest
         ports:
         - containerPort: 5000
